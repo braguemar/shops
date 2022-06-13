@@ -1,0 +1,11 @@
+.item-list {
+  max-width: 900px;
+  margin: auto;
+
+  &__wrapper {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+}

@@ -1,0 +1,6 @@
+<div class="item-list">
+  <div class="item-list__wrapper">
+    <shops-breadcrumb [breads]="(products | async)?.[0]?.categories || []"></shops-breadcrumb>
+    <shops-item *ngFor="let product of products | async" [product]="product"></shops-item>
+  </div>
+</div>

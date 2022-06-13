@@ -1,0 +1,24 @@
+<div class="item-detail">
+  <shops-breadcrumb [breads]="product?.categories || []"></shops-breadcrumb>
+  <div class="item-detail__wrapper">
+    <div class="item-detail__pictures">
+      <button class="item-detail__arrow-button item-detail__prev-button" (click)="indexSelected = indexSelected - 1" [disabled]="!indexSelected"></button>
+      <button class="item-detail__arrow-button item-detail__next-button" (click)="indexSelected = indexSelected + 1" [disabled]="!(indexSelected < picturesLength - 1)"></button>
+      <ng-container *ngFor="let picture of product?.item?.pictures; index as i">
+        <img [src]="picture" alt="" *ngIf="indexSelected === i">
+      </ng-container>
+    </div>
+    <div class="item-detail__summary">
+      <div class="item-detail__status">
+        <span>{{ product?.item?.condition }} - {{ product?.item?.soldQuantity | number: '1.0-0' }} vendidos</span>
+      </div>
+      <span class="item-detail__title">{{ product?.item?.title }}</span>
+      <span class="item-detail__price">{{ product?.item?.price?.amount | currency:product?.item?.price?.currency :'symbol' :'1.0-0' }}</span>
+      <button class="item-detail__shop-button">Comprar</button>
+    </div>
+    <div class="item-detail__note">
+      <h4 class="item-detail__subtitle">Descripción del producto</h4>
+      <p class="item-detail__description" [innerText]="product?.item?.description"></p>
+    </div>
+  </div>
+</div>

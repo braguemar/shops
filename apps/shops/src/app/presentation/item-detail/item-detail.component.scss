@@ -1,0 +1,110 @@
+.item-detail {
+  max-width: 900px;
+  margin: 20px auto;
+
+  &__wrapper {
+    background-color: #fff;
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 500px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+
+  &__pictures {
+    grid-area: 1 / 1 / 2 / 3;
+    padding: 20px;
+    position: relative;
+
+    img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      transition: .6s ease-in-out;
+    }
+  }
+
+  &__status {
+    color: rgb(0 0 0 / 55%);
+    font-size: 14px;
+    font-weight: 400;
+    white-space: pre-wrap;
+  }
+
+  &__title {
+    font-size: 22px;
+  }
+
+  &__price {
+    font-size: 36px;
+  }
+
+  &__summary {
+    grid-area: 1 / 3 / 2 / 4;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__note {
+    grid-area: 2 / 1 / 3 / 3;
+    padding: 0 20px;
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  &__description {
+    color: #666;
+    font-size: 20px;
+    font-weight: 300;
+    ;
+  }
+
+  &__arrow-button {
+    border: none;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: 31px;
+    background-position: 50%;
+    border-radius: 100px;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    z-index: 1;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgb(0 0 0 / 15%);
+  }
+
+  &__next-button {
+    right: 10px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0Ij48cGF0aCBkPSJNOC41OSAxNi41OUwxMy4xNyAxMiA4LjU5IDcuNDEgMTAgNmw2IDYtNiA2LTEuNDEtMS40MXoiLz48cGF0aCBkPSJNMCAwaDI0djI0SDBWMHoiIGZpbGw9Im5vbmUiLz48L3N2Zz4=);
+  }
+
+  &__prev-button {
+    left: 10px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0Ij48cGF0aCBkPSJNMTUuNDEgMTYuNTlMMTAuODMgMTJsNC41OC00LjU5TDE0IDZsLTYgNiA2IDYgMS40MS0xLjQxeiIvPjxwYXRoIGQ9Ik0wIDBoMjR2MjRIMFYweiIgZmlsbD0ibm9uZSIvPjwvc3ZnPg==);
+  }
+
+  &__shop-button {
+    margin-top: 30px;
+    background-color: #3483fa;
+    border-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    height: 48px;
+    line-height: 1.0;
+    // padding: 0 24px;
+    text-align: center;
+    width: 100%;
+    border-radius: 6px;
+  }
+}

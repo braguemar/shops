@@ -1,0 +1,11 @@
+<div class="toolbar">
+  <div class="toolbar__wrapper">
+    <div class="toolbar__brand">
+      <img src="/assets/images/brand.png" alt="Brand" (click)="goHome()">
+    </div>
+    <div class="toolbar__search-section">
+      <input type="text" id="toolbar-input-search" class="toolbar__input-search" [formControl]="searchControl" (keyup.enter)="onSearch()">
+      <button id="toolbar-button-search" class="toolbar__button-search" (click)="onSearch()"></button>
+    </div>
+  </div>
+</div>

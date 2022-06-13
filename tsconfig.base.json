@@ -15,7 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@shops/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@shops/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@shops-front/env": ["apps/shops/src/environments/environment.ts"],
+      "@shops-front/data": ["apps/shops/src/app/data/"],
+      "@shops-front/presentation": ["apps/shops/src/app/presentation/"],
     }
   },
   "exclude": ["node_modules", "tmp"]
